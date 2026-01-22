@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Job Application Tracker</h1>
+    <p>Track your job applications in one place</p>
+  </header>
+
+  <section class="form-section">
+    <h2>Add Application</h2>
+    <form id="jobForm">
+      <input type="text" id="company" placeholder="Company name" required />
+      <input type="text" id="role" placeholder="Job role" required />
+      <input type="date" id="date" required />
+
+      <select id="status">
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+
+      <button type="submit">Add Application</button>
+    </form>
+  </section>
+
+  <section class="list-section">
+    <h2>Your Applications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="jobList">
+        <!-- Jobs will appear here -->
+         <div class="filters">
+    <input type="text" id="search" placeholder="Search by company or role" />
+    <select id="filterStatus">
+      <option value="All">All</option>
+      <option value="Applied">Applied</option>
+      <option value="Interview">Interview</option>
+      <option value="Rejected">Rejected</option>
+    </select>
+  </div>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
